@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>Bienvenu dans ce blog </h1>
+
+{% for article in articles %}
+
+<article>
+    <h2>{{ article.title }}</h2>
+    <img src="{{ article.image }}" alt="" />
+    <p>{{ article.content }}</p>
+
+    <p>Ecrit le : {{ article.createdAt | date('d/m/Y') }} </p>
+
+    
+</article>
+
+{% endfor %}
+
+{% endblock %}
+
