@@ -11,6 +11,9 @@
     <p>{{ article.content }}</p>
 
     <p>Ecrit le : {{ article.createdAt | date('d/m/Y') }} </p>
+    
+
+    <a href="{{ path("blog_show", { id: article.id}) }}" >Voir plus</a>
 
     
 </article>
